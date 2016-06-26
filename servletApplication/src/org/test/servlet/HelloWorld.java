@@ -20,6 +20,9 @@ public class HelloWorld extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
 		PrintWriter out = resp.getWriter();
 		out.println("Hello World");
+		//req.getRequestDispatcher("/goodbye").forward(req, resp);
+		//req.getRequestDispatcher("/goodbye").include(req, resp);
+		resp.sendRedirect("http://www.facebook.com");
 	}
 
 }
